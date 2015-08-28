@@ -24,7 +24,7 @@ module OmniAuth
       # additional calls (if the user id is returned with the token
       # or as a URI parameter). This may not be possible with all
       # providers.
-      uid{ raw_info['openid'] }
+      uid{ raw_info['unionid'] }
 
       info do
         {
@@ -34,6 +34,7 @@ module OmniAuth
           city:       raw_info['city'],
           country:    raw_info['country'],
           headimgurl: raw_info['headimgurl'],
+          openid:     raw_info['openid']
         }
       end
 
